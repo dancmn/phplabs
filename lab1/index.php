@@ -16,7 +16,10 @@
 
     <main>
         <?php
-            echo 'Hello World!'
+            echo 'Hello World!<br>';
+            $c = '2';
+            $d = '3.4кг';
+            echo (float)$d;
         ?>
     </main>
 
