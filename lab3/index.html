@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form action="https://httpbin.org/post" method="post">
+            <div class="mb-3">
+                <label for="name">Enter your name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="mb-3">
+                <label for="female">Enter your female</label>
+                <input type="text" name="female" id="female">
+            </div>
+            <div class="mb-3">
+                <label for="email">Enter your email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="mb-3">
+                <textarea name="desc" id="desc" cols="30" rows="10">
+                    desc
+                </textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+        <a href="back.php">Переход на вторую страницу</a>
+    </main>
+</body>
+</html>
