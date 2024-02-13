@@ -12,7 +12,7 @@
         $operator = $elems[1];
         $operand = $elems[2];
         $result = $elems[4];
-        $x = NAN;
+        $x = 0;
         switch ($operator) {
             case '+':
                 $x = $result - $operand;
