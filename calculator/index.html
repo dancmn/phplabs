@@ -1,37 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Калькулятор</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>Lab 4</title>
 </head>
 <body>
-    
-<div id="calculator">
-    <input type="text" id="display" placeholder="Введите выражение" />
-    <div id="buttons">
-        <button onclick="appendToDisplay('0')"> 0 </button>
-        <button onclick="appendToDisplay('1')"> 1 </button>
-        <button onclick="appendToDisplay('2')"> 2 </button>
-        <button onclick="appendToDisplay('3')"> 3 </button>
-        <button onclick="appendToDisplay('4')"> 4 </button>
-        <button onclick="appendToDisplay('5')"> 5 </button>
-        <button onclick="appendToDisplay('6')"> 6 </button>
-        <button onclick="appendToDisplay('7')"> 7 </button>
-        <button onclick="appendToDisplay('8')"> 8 </button>
-        <button onclick="appendToDisplay('9')"> 9 </button>
-        <button onclick="appendToDisplay('(')"> ( </button>
-        <button onclick="appendToDisplay(')')"> ) </button>
-        <button onclick="appendToDisplay('/')"> / </button>
-        <button onclick="appendToDisplay('*')"> * </button>
-        <button onclick="appendToDisplay('-')"> - </button>
-        <button onclick="appendToDisplay('+')"> + </button>
-        <button onclick="clearDisplay()"> C </button>
-        <button onclick="calculate()"> = </button>
-    </div>
-</div>
-
-<script src="script.js"></script>
-
+    <main>
+        <div class="calculator">
+            <label class="calculator__label">
+                <input type="text" id="input" value="" placeholder="Введите пример" readonly class="calculator__input">
+            </label>
+            
+            <div class="button__wrapper">
+                <button class="calculator__button">1</button>
+                <button class="calculator__button">2</button>
+                <button class="calculator__button">3</button>
+                <button class="calculator__button">4</button>
+                <button class="calculator__button">5</button>
+                <button class="calculator__button">6</button>
+                <button class="calculator__button">7</button>
+                <button class="calculator__button">8</button>
+                <button class="calculator__button">9</button>
+                <button class="calculator__button">0</button>
+                <button class="calculator__button">(</button>
+                <button class="calculator__button">)</button>
+                <button class="calculator__button">+</button>
+                <button class="calculator__button">-</button>
+                <button class="calculator__button">*</button>
+                <button class="calculator__button">/</button>
+                <button class="calculator__button">sin</button>
+                <button class="calculator__button">cos</button>
+                <button class="calculator__button">tg</button>
+                <button class="calculator__button">ctg</button>
+                
+                <button class="calculator__button">Сбросить</button>
+                <button class="calculator__button">Посчитать</button>
+                <button class="calculator__button">.</button>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
 </body>
 </html>
