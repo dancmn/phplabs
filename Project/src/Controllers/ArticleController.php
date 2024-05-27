@@ -48,7 +48,7 @@ class ArticleController{
         $article->setText($_POST['text']);
         $article->setAuthorId($_POST['authorId']);
         $article->save();
-        header('Location:/student-231/Project/www/articles');
+        header('Location:/phplabs/Project/www/articles');
     }
 
     public function edit(int $id){
@@ -62,12 +62,12 @@ class ArticleController{
         $article->setText($_POST['text']);
         $article->setAuthorId($_POST['authorId']);
         $article->save();
-        header('Location:/student-231/Project/www/article/'.$article->getId());
+        header('Location:/phplabs/Project/www/article/'.$article->getId());
     }
     
     public function delete(int $id){
         $article = Article::getById($id);
         $article->delete();
-        header('Location:/student-231/Project/www/articles');
+        header('Location:/phplabs/Project/www/articles');
     }
 }

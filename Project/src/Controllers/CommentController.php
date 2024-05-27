@@ -5,6 +5,7 @@ namespace src\Controllers;
 use ReflectionObject;
 use src\Models\Comments\Comment;
 use src\Models\Users\User;
+use src\Models\Articles\Article;
 use src\View\View;
 
 
@@ -25,10 +26,21 @@ class CommentController{
         header('Location:/phplabs/Project/www/article/' . $article_id);
     }
 
-    public function edit(int $id){
+    public function update(int $id){
         $comment = Comment::getById($id);
+        $comment->setAuthorId($comment->getAuthorId()->getId());
+        $comment->setArticleId($comment->getArticleId());
+        $comment->setText($_POST['text']);
+        $comment->save();
+        header('Location:/phplabs/Project/www/article/'.$comment->getArticleId());
+    }
 
-        $this->view->renderHtml('comments/update.php', ['comment' => $comment]);
+    public function edit(int $id){
+        $users = User::findAll();
+        $comment = Comment::getById($id);
+        $article_id = $comment->getArticleId();
+        $article = Article::getByid($article_id);
+        $this->view->renderHtml('comments/update.php', ['comment' => $comment, 'users'=>$users, 'article'=>$article]);
     }
 
     public function delete(int $id){

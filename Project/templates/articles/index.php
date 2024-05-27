@@ -8,8 +8,6 @@ foreach ($articles as $article):
             <h5 class="card-title"><a href="<?= dirname($_SERVER['SCRIPT_NAME']); ?>/article/<?= $article->getId(); ?>"><?= $article->getName(); ?></a></h5>
             <h6 class="card-subtitle mb-2 text-muted"><?= $article->getAuthorId()->getNickname(); ?></h6>
             <p class="card-text"><?= $article->getText(); ?></p>
-            <!-- Ссылка на создание нового комментария -->
-            <a href="<?= dirname($_SERVER['SCRIPT_NAME']); ?>/article/<?= $article->getId(); ?>/comments/create" class="btn btn-primary">Add Comment</a>
         </div>
     </div>
 <?php

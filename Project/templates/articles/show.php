@@ -16,6 +16,7 @@
         <div class="card-body">
           <h6 class="card-subtitle mb-2 text-muted">Author: <?= $comment->getAuthorId()->getNickName(); ?></h6>
           <p class="card-text"><?= $comment->getText(); ?></p>
+          <a href="<?= dirname($_SERVER['SCRIPT_NAME']); ?>/article/<?= $article->getId(); ?>/comments/edit/<?= $comment->getId(); ?>" class="btn btn-primary">Edit Comments</a>
           <a href="<?= dirname($_SERVER['SCRIPT_NAME']); ?>/article/<?= $article->getId(); ?>/comments/delete/<?= $comment->getId(); ?>" class="btn btn-danger">Delete</a>
         </div>
       </div>

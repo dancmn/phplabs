@@ -7,7 +7,7 @@ use src\Models\Users\User;
 
 class Comment extends ActiveRecordEntity{
     protected $authorId;
-    protected $artictleId;
+    protected $articleId;
     protected $text;
     protected $createdAt;
 
